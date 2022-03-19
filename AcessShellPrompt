@@ -1,0 +1,109 @@
+vrushali@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+vrushali@ubuntu:~$ pwd
+/home/vrushali
+vrushali@ubuntu:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            938M     0  938M   0% /dev
+tmpfs           195M  4.1M  191M   3% /run
+/dev/sda5        20G  6.7G   12G  38% /
+tmpfs           971M     0  971M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           971M     0  971M   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop1       62M   62M     0 100% /snap/core20/1328
+/dev/loop2      249M  249M     0 100% /snap/gnome-3-38-2004/99
+/dev/loop3       66M   66M     0 100% /snap/gtk-common-themes/1519
+/dev/loop4       44M   44M     0 100% /snap/snapd/14978
+/dev/loop5       55M   55M     0 100% /snap/snap-store/558
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           195M   80K  195M   1% /run/user/1000
+vrushali@ubuntu:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev              960392       0    960392   0% /dev
+tmpfs             198776    4104    194672   3% /run
+/dev/sda5       19992176 7020852  11932732  38% /
+tmpfs             993860       0    993860   0% /dev/shm
+tmpfs               5120       4      5116   1% /run/lock
+tmpfs             993860       0    993860   0% /sys/fs/cgroup
+/dev/loop0           128     128         0 100% /snap/bare/5
+/dev/loop1         63488   63488         0 100% /snap/core20/1328
+/dev/loop2        254848  254848         0 100% /snap/gnome-3-38-2004/99
+/dev/loop3         66816   66816         0 100% /snap/gtk-common-themes/1519
+/dev/loop4         44672   44672         0 100% /snap/snapd/14978
+/dev/loop5         55552   55552         0 100% /snap/snap-store/558
+/dev/sda1         523248       4    523244   1% /boot/efi
+tmpfs             198772      80    198692   1% /run/user/1000
+vrushali@ubuntu:~$ ls -l
+total 32
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Desktop
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Documents
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Downloads
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Music
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Pictures
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Public
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Templates
+drwxr-xr-x 2 vrushali vrushali 4096 Mar 18 03:16 Videos
+vrushali@ubuntu:~$ ls -lh
+total 32K
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Desktop
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Documents
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Downloads
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Music
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Pictures
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Public
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Templates
+drwxr-xr-x 2 vrushali vrushali 4.0K Mar 18 03:16 Videos
+vrushali@ubuntu:~$ ls -lhtra
+total 76K
+drwxr-xr-x  3 root     root     4.0K Mar 18 03:04 ..
+-rw-r--r--  1 vrushali vrushali 3.7K Mar 18 03:04 .bashrc
+-rw-r--r--  1 vrushali vrushali  220 Mar 18 03:04 .bash_logout
+-rw-r--r--  1 vrushali vrushali  807 Mar 18 03:04 .profile
+drwxr-xr-x  3 vrushali vrushali 4.0K Mar 18 03:16 .local
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Videos
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Templates
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Public
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Pictures
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Music
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Downloads
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Documents
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Desktop
+drwx------  2 vrushali vrushali 4.0K Mar 18 03:17 .ssh
+drwx------ 10 vrushali vrushali 4.0K Mar 18 03:18 .config
+-rw-------  1 vrushali vrushali    7 Mar 18 03:20 .bash_history
+drwxr-xr-x 15 vrushali vrushali 4.0K Mar 18 03:20 .
+drwx------ 12 vrushali vrushali 4.0K Mar 18 03:27 .cache
+drwx------  3 vrushali vrushali 4.0K Mar 18 03:28 .gnupg
+vrushali@ubuntu:~$ ls -lhtra /home/vrushali/
+total 76K
+drwxr-xr-x  3 root     root     4.0K Mar 18 03:04 ..
+-rw-r--r--  1 vrushali vrushali 3.7K Mar 18 03:04 .bashrc
+-rw-r--r--  1 vrushali vrushali  220 Mar 18 03:04 .bash_logout
+-rw-r--r--  1 vrushali vrushali  807 Mar 18 03:04 .profile
+drwxr-xr-x  3 vrushali vrushali 4.0K Mar 18 03:16 .local
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Videos
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Templates
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Public
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Pictures
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Music
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Downloads
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Documents
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 Desktop
+drwx------  2 vrushali vrushali 4.0K Mar 18 03:17 .ssh
+drwx------ 10 vrushali vrushali 4.0K Mar 18 03:18 .config
+-rw-------  1 vrushali vrushali    7 Mar 18 03:20 .bash_history
+drwxr-xr-x 15 vrushali vrushali 4.0K Mar 18 03:20 .
+drwx------ 12 vrushali vrushali 4.0K Mar 18 03:27 .cache
+drwx------  3 vrushali vrushali 4.0K Mar 18 03:28 .gnupg
+vrushali@ubuntu:~$ ls -lhtra /home/vrushali/Downloads/
+total 8.0K
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 .
+drwxr-xr-x 15 vrushali vrushali 4.0K Mar 18 03:20 ..
+vrushali@ubuntu:~$ ls -lhtra Downloads/
+total 8.0K
+drwxr-xr-x  2 vrushali vrushali 4.0K Mar 18 03:16 .
+drwxr-xr-x 15 vrushali vrushali 4.0K Mar 18 03:20 ..
+vrushali@ubuntu:~$ mkdir vrush
+vrushali@ubuntu:~$ ls
+Desktop    Downloads  Pictures  Templates  vrush
