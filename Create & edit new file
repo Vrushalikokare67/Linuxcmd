@@ -1,0 +1,32 @@
+vrushali@ubuntu:~$ mkdir cmd
+vrushali@ubuntu:~$ cd cmd/
+vrushali@ubuntu:~/cmd$ ls
+vrushali@ubuntu:~/cmd$ cat > file.txt
+Hello team
+Hope you are doing well
+please take care all of you
+thank you^Z
+[1]+  Stopped                 cat > file.txt
+vrushali@ubuntu:~/cmd$ ls
+file.txt
+vrushali@ubuntu:~/cmd$ ls -l file.txt
+-rw-rw-r-- 1 vrushali vrushali 63 Mar 19 07:08 file.txt
+vrushali@ubuntu:~/cmd$ cat file.txt
+Hello team
+Hope you are doing well
+please take care all of you
+vrushali@ubuntu:~/cmd$ touch example.txt
+vrushali@ubuntu:~/cmd$ ls -l file.txt
+-rw-rw-r-- 1 vrushali vrushali 63 Mar 19 07:08 file.txt
+vrushali@ubuntu:~/cmd$ ls
+example.txt  file.txt
+vrushali@ubuntu:~/cmd$ touch example1.txt example2.txt
+vrushali@ubuntu:~/cmd$ ls
+example1.txt  example2.txt  example.txt  file.txt
+vrushali@ubuntu:~/cmd$ nano file.txt
+vrushali@ubuntu:~/cmd$ cat file.txt
+Hello team
+have a good day
+Hope you are doing well
+please take care all of you
+thank you so much
