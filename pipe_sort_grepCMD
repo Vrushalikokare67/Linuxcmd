@@ -1,0 +1,39 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+vrushali@ubuntu:~$ ls
+Desktop    Downloads  Music     Public     Videos
+Documents  listings   Pictures  Templates  vrush
+vrushali@ubuntu:~$ cat listings
+welcome team
+vrushali@ubuntu:~$ cat vrush
+cat: vrush: Is a directory
+vrushali@ubuntu:~$ echo welcome > listings
+vrushali@ubuntu:~$ cat listings
+welcome
+vrushali@ubuntu:~$ grep "welcome" listings
+welcome
+vrushali@ubuntu:~$ grep  -h "welcome" listings
+welcome
+vrushali@ubuntu:~$ cd Desktop
+vrushali@ubuntu:~/Desktop$ cat > learn.txt
+learning how to create text file in terminal^Z
+[1]+  Stopped                 cat > learn.txt
+vrushali@ubuntu:~/Desktop$ cat > iauro.txt
+welcome in the iauro devops team^Z
+[2]+  Stopped                 cat > iauro.txt
+vrushali@ubuntu:~/Desktop$ ls
+iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ cat iauro.txt | wc
+      0       0       0
+
+vrushali@ubuntu:~/Desktop$ cat  > iauro1.txt
+iauro team welcome
+celebrate all programs in this team
+all members are helpful^Z
+[3]+  Stopped                 cat > iauro1.txt
+vrushali@ubuntu:~/Desktop$ cat iauro1.txt | wc
+      2       9      55
+vrushali@ubuntu:~/Desktop$ cat iauro1.txt | sort
+celebrate all programs in this team
+iauro team welcome
