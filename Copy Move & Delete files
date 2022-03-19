@@ -1,0 +1,28 @@
+vrushali@ubuntu:~/cmd$ pwd
+/home/vrushali/cmd
+vrushali@ubuntu:~/cmd$ mkdir TestDir
+vrushali@ubuntu:~/cmd$ ls
+example1.txt  example2.txt  example.txt  file.txt  TestDir
+vrushali@ubuntu:~/cmd$ cd TestDir/
+vrushali@ubuntu:~/cmd/TestDir$ touch test1file.txt
+vrushali@ubuntu:~/cmd/TestDir$ ls
+test1file.txt
+vrushali@ubuntu:~/cmd/TestDir$ nano testfile1.txt
+
+
+Use "fg" to return to nano.
+
+[2]+  Stopped                 nano testfile1.txt
+vrushali@ubuntu:~/cmd/TestDir$ cat testfile1.txt
+This is simple text file
+in this file save the data
+
+vrushali@ubuntu:~/cmd/TestDir$ cp testfile1.txt copyfile.txt
+vrushali@ubuntu:~/cmd/TestDir$ mv testfile1.txt origfile.txt
+vrushali@ubuntu:~/cmd/TestDir$ mkdir SubDir1
+vrushali@ubuntu:~/cmd/TestDir$ mv origfile.txt SubDir1/
+vrushali@ubuntu:~/cmd/TestDir$ cd SubDir1/
+vrushali@ubuntu:~/cmd/TestDir/SubDir1$ ls
+origfile.txt
+vrushali@ubuntu:~/cmd/TestDir/SubDir1$ rm origfile.txt
+vrushali@ubuntu:~/cmd/TestDir/SubDir1$ ls
