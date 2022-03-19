@@ -1,0 +1,48 @@
+vrushali@ubuntu:~$ ls
+Desktop  Documents  Downloads  listings  Music  Pictures  Public  Templates  Videos  vrush
+vrushali@ubuntu:~$ cd Desktop
+vrushali@ubuntu:~/Desktop$ ls
+iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ gzip iauro.txt
+vrushali@ubuntu:~/Desktop$ ls
+iauro1.txt  iauro.txt.gz  learn.txt
+vrushali@ubuntu:~/Desktop$ zcat iauro.txt.gz
+vrushali@ubuntu:~/Desktop$ gunzip iauro.txt.gz
+vrushali@ubuntu:~/Desktop$ ls
+iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ gzip iauro1.txt
+vrushali@ubuntu:~/Desktop$ ls
+iauro1.txt.gz  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ zcat iauro1.txt.gz
+iauro team welcome
+celebrate all programs in this team
+vrushali@ubuntu:~/Desktop$ gunzip iauro1.txt.gz
+vrushali@ubuntu:~/Desktop$ ls
+iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ bzip2 iauro.txt
+vrushali@ubuntu:~/Desktop$ ls
+iauro1.txt  iauro.txt.bz2  learn.txt
+vrushali@ubuntu:~/Desktop$ bunzip2 iauro.txt.bz2
+vrushali@ubuntu:~/Desktop$ ls
+iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ tar cf devops.tar iauro.txt learn.txt
+vrushali@ubuntu:~/Desktop$ ls
+devops.tar  iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ tar cf devops.zip iauro.txt learn.txt
+vrushali@ubuntu:~/Desktop$ ls
+devops.tar  devops.zip  iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ tar cf devops.tar.gz iauro.txt learn.txt
+vrushali@ubuntu:~/Desktop$ ls
+devops.tar  devops.tar.gz  devops.zip  iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ tar tvf devops.tar
+-rw-rw-r-- vrushali/vrushali 0 2022-03-19 03:07 iauro.txt
+-rw-rw-r-- vrushali/vrushali 0 2022-03-19 03:05 learn.txt
+vrushali@ubuntu:~/Desktop$ tar tvf devops.zip
+-rw-rw-r-- vrushali/vrushali 0 2022-03-19 03:07 iauro.txt
+-rw-rw-r-- vrushali/vrushali 0 2022-03-19 03:05 learn.txt
+vrushali@ubuntu:~/Desktop$ tar tvf devops.tar.gz
+-rw-rw-r-- vrushali/vrushali 0 2022-03-19 03:07 iauro.txt
+-rw-rw-r-- vrushali/vrushali 0 2022-03-19 03:05 learn.txt
+vrushali@ubuntu:~/Desktop$ tar xvf devops.tar
+iauro.txt
+learn.txt
