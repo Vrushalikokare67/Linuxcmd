@@ -1,0 +1,29 @@
+vrushali@ubuntu:~$ ls -al
+total 80
+drwxr-xr-x 16 vrushali vrushali 4096 Mar 18 03:37 .
+drwxr-xr-x  3 root     root     4096 Mar 18 03:04 ..
+-rw-------  1 vrushali vrushali  141 Mar 18 03:39 .bash_history
+-rw-r--r--  1 vrushali vrushali  220 Mar 18 03:04 .bash_logout
+-rw-r--r--  1 vrushali vrushali 3771 Mar 18 03:04 .bashrc
+drwx------ 12 vrushali vrushali 4096 Mar 18 03:27 .cache
+drwx------ 10 vrushali vrushali 4096 Mar 18 03:18 .config
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Desktop
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Documents
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Downloads
+drwx------  3 vrushali vrushali 4096 Mar 18 03:28 .gnupg
+drwxr-xr-x  3 vrushali vrushali 4096 Mar 18 03:16 .local
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Music
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Pictures
+-rw-r--r--  1 vrushali vrushali  807 Mar 18 03:04 .profile
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Public
+drwx------  2 vrushali vrushali 4096 Mar 18 03:17 .ssh
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Templates
+drwxr-xr-x  2 vrushali vrushali 4096 Mar 18 03:16 Videos
+drwxrwxr-x  2 vrushali vrushali 4096 Mar 18 03:37 vrush
+vrushali@ubuntu:~$ echo iauro > listings
+vrushali@ubuntu:~$ cat listings
+iauro
+vrushali@ubuntu:~$ echo welcome team  > listings
+vrushali@ubuntu:~$ cat listings
+welcome team
+vrushali@ubuntu:~$ 
