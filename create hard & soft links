@@ -1,0 +1,16 @@
+
+
+vrushali@ubuntu:~$ cd  Desktop/
+vrushali@ubuntu:~/Desktop$ ls
+devops.tar  devops.tar.gz  devops.zip  iauro1.txt  iauro.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ ln learn.txt hardlink
+vrushali@ubuntu:~/Desktop$ ls
+devops.tar     devops.zip  iauro1.txt  learn.txt
+devops.tar.gz  hardlink    iauro.txt
+vrushali@ubuntu:~/Desktop$ ln -s learn.txt softlink
+vrushali@ubuntu:~/Desktop$ ls
+devops.tar     devops.zip  iauro1.txt  learn.txt
+devops.tar.gz  hardlink    iauro.txt   softlink
+vrushali@ubuntu:~/Desktop$ 
+
+
