@@ -1,0 +1,43 @@
+vrushali@ubuntu:~$  sudo apt-get install ufw
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ufw is already the newest version (0.36-6ubuntu1).
+ufw set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 16 not upgraded.
+vrushali@ubuntu:~$ sudo ufw status verbose
+Status: inactive
+vrushali@ubuntu:~$ sudo ufw enable
+Firewall is active and enabled on system startup
+vrushali@ubuntu:~$ sudo ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+vrushali@ubuntu:~$ sudo vim /etc/default/ufw
+sudo: vim: command not found
+vrushali@ubuntu:~$ sudo ufw default deny outgoing
+Default outgoing policy changed to 'deny'
+(be sure to update your rules accordingly)
+vrushali@ubuntu:~$ sudo ufw app list
+Available applications:
+  CUPS
+vrushali@ubuntu:~$ sudo ufw app info 'CUPS'
+Profile: CUPS
+Title: Common UNIX Printing System server
+Description: CUPS is a printing system with support for IPP, samba, lpd,
+and other protocols.
+
+Port:
+  631
+vrushali@ubuntu:~$ sudo ufw status numbered
+Status: active
+vrushali@ubuntu:~$ sudo ufw reset
+Resetting all rules to installed defaults. Proceed with operation (y|n)? y
+Backing up 'user.rules' to '/etc/ufw/user.rules.20220321_074321'
+Backing up 'before.rules' to '/etc/ufw/before.rules.20220321_074321'
+Backing up 'after.rules' to '/etc/ufw/after.rules.20220321_074321'
+Backing up 'user6.rules' to '/etc/ufw/user6.rules.20220321_074321'
+Backing up 'before6.rules' to '/etc/ufw/before6.rules.20220321_074321'
+Backing up 'after6.rules' to '/etc/ufw/after6.rules.20220321_074321'
+
