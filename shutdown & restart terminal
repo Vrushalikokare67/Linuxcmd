@@ -1,0 +1,7 @@
+
+vrushali@ubuntu:~$ shutdown -h now
+vrushali@ubuntu:~$ sudo poweroff
+[sudo]password for vrushali@ubuntu
+vrushali@ubuntu:~$ shutdown -h now
+vrushali@ubuntu:~$ sudo reboot
+[sudo]password for vrushali@ubuntu
