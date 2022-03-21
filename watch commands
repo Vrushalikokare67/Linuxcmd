@@ -1,0 +1,28 @@
+vrushali@ubuntu:~$ watch free -m
+total        used        free      shared  buff/cache   available
+Mem:           1941         947         165           2         828         835
+Swap:           923           1         922
+vrushali@ubuntu:~$ watch  -n 0.5 free -m
+total        used        free      shared  buff/cache   available
+Mem:           1941         947         165           2         828         835
+Swap:           923           1         922
+vrushali@ubuntu:~$ watch df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev              960392       0    960392   0% /dev
+tmpfs             198776    1544    197232   1% /run
+/dev/sda5       19992176 6870992  12082592  37% /
+tmpfs             993860       0    993860   0% /dev/shm
+tmpfs               5120       4      5116   1% /run/lock
+tmpfs             993860       0    993860   0% /sys/fs/cgroup
+/dev/loop0           128     128         0 100% /snap/bare/5
+/dev/loop1        254848  254848         0 100% /snap/gnome-3-38-2004/99
+/dev/loop2         63488   63488         0 100% /snap/core20/1328
+/dev/loop3         55552   55552         0 100% /snap/snap-store/558
+/dev/loop4         63488   63488         0 100% /snap/core20/1376
+/dev/loop5         44672   44672         0 100% /snap/snapd/14978
+/dev/loop6         66816   66816         0 100% /snap/gtk-common-themes/1519
+/dev/loop7         44800   44800         0 100% /snap/snapd/15177
+/dev/sda1         523248       4    523244   1% /boot/efi
+tmpfs             198772      52    198720   1% /run/user/1000
+
+
