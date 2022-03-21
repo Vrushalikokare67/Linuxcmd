@@ -1,0 +1,98 @@
+root@ubuntu:/home/vrushali# lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0 248.8M  1 loop /snap/gnome-3-38-2004/99
+loop2    7:2    0  61.9M  1 loop /snap/core20/1328
+loop3    7:3    0  54.2M  1 loop /snap/snap-store/558
+loop4    7:4    0  61.9M  1 loop /snap/core20/1376
+loop5    7:5    0  43.6M  1 loop /snap/snapd/14978
+loop6    7:6    0  65.2M  1 loop /snap/gtk-common-themes/1519
+loop7    7:7    0  43.6M  1 loop /snap/snapd/15177
+sda      8:0    0    20G  0 disk 
+├─sda1   8:1    0   512M  0 part /boot/efi
+├─sda2   8:2    0     1K  0 part 
+└─sda5   8:5    0  19.5G  0 part /
+sr0     11:0    1  1024M  0 rom  
+
+root@ubuntu:/home/vrushali# pvcreate /dev/sdb /dev/sdc
+physical volume “/dev/sdb” successfully created
+physical volume “/dev/sdc” successfully created
+root@ubuntu:/home/vrushali# man pvcreate
+ root@ubuntu:/home/vrushali# pvdisplay /dev/sdb
+“/dev/sdb” is a new physical volume of “10.00 gib”
+— new physical volume —
+pv name               /dev/sdb
+vg name ==> if the disk is assigned to the any vg, that vg name would be shown here.
+pv size               10.00 gib ==> size of the physical volume.
+allocatable           no
+pe size               0
+total pe              0
+free pe               0
+allocated pe          0
+pv uuid               mlcgdc-3umh-fryk-tbbo-68v2-sjck-asws2v
+[root@linux1 ~]# pvdisplay /dev/sdc
+“/dev/sdc” is a new physical volume of “10.00 gib”
+— new physical volume —
+pv name               /dev/sdc
+vg name
+pv size               10.00 gib
+allocatable           no
+pe size               0
+total pe              0
+free pe               0
+allocated pe          0
+pv uuid               ffn3i3-e5fd-5rwx-ui7l-b8ed-xmqk-zha5un
+root@ubuntu:/home/vrushali# vgcreate datavg /dev/sdb /dev/sdc
+volume group “datavg” successfully created
+root@ubuntu:/home/vrushali#vgdisplay -v datavg
+using volume group(s) on command line.
+— volume group —
+vg name               datavg
+system id
+format                lvm2
+metadata areas        2
+metadata sequence no  1
+vg access             read/write
+vg status             resizable
+max lv                0
+cur lv                0
+open lv               0
+max pv                0
+cur pv                2 ==> number of current pv associated with the vg.
+act pv                2 ==> number of active pv associated with the vg.
+vg size               19.99 gib ==> total size of vg combined with two pv.
+pe size               4.00 mib
+total pe              5118
+alloc pe / size       0 / 0 ==> no space is used from this vg.
+free  pe / size       5118 / 19.99 gib ==> 5118 pe or 19.99 gb is available in this vg.
+vg uuid               skjchs-xnnm-8sww-ii5c-a0ri-taef-qwooqm
+— physical volumes —
+pv name               /dev/sdb
+pv uuid               mlcgdc-3umh-fryk-tbbo-68v2-sjck-asws2v
+pv status             allocatable
+total pe / free pe    2559 / 2559
+pv name               /dev/sdc
+pv uuid               ffn3i3-e5fd-5rwx-ui7l-b8ed-xmqk-zha5un
+pv status             allocatable
+total pe / free pe    2559 / 2559
+root@ubuntu:/home/vrushali# lvcreate -l 10g -n datavol1 datavg
+logical volume “datavol1” created
+root@ubuntu:/home/vrushali# lvcreate -l 19.99g -n datavol1 datavg
+root@ubuntu:/home/vrushali# lvdisplay -v /dev/datavg/datavol1
+using logical volume(s) on command line.
+— logical volume —
+lv path                /dev/datavg/datavol1
+lv name                datavol1
+vg name                datavg ==> this lv belongs to vg datavg.
+lv uuid                pnxlzm-wqrv-vosa-av3m-20hn-zplr-lpvwwq
+lv write access        read/write
+lv creation host, time linux1.learnitguide.net, 2016-06-18 18:19:37 -0400
+lv status              available
+# open                 0
+lv size                10.00 gib ==> size of the logical volume.
+current le             2560
+segments               2
+allocation             inherit
+read ahead sectors     auto
+– currently set to     8192
+block device           253:2
