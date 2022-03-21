@@ -1,0 +1,135 @@
+vrushali@ubuntu:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev              960392       0    960392   0% /dev
+tmpfs             198776    1544    197232   1% /run
+/dev/sda5       19992176 6870992  12082592  37% /
+tmpfs             993860       0    993860   0% /dev/shm
+tmpfs               5120       4      5116   1% /run/lock
+tmpfs             993860       0    993860   0% /sys/fs/cgroup
+/dev/loop0           128     128         0 100% /snap/bare/5
+/dev/loop1        254848  254848         0 100% /snap/gnome-3-38-2004/99
+/dev/loop2         63488   63488         0 100% /snap/core20/1328
+/dev/loop3         55552   55552         0 100% /snap/snap-store/558
+/dev/loop4         63488   63488         0 100% /snap/core20/1376
+/dev/loop5         44672   44672         0 100% /snap/snapd/14978
+/dev/loop6         66816   66816         0 100% /snap/gtk-common-themes/1519
+/dev/loop7         44800   44800         0 100% /snap/snapd/15177
+/dev/sda1         523248       4    523244   1% /boot/efi
+tmpfs             198772      52    198720   1% /run/user/1000
+vrushali@ubuntu:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            938M     0  938M   0% /dev
+tmpfs           195M  1.6M  193M   1% /run
+/dev/sda5        20G  6.6G   12G  37% /
+tmpfs           971M     0  971M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           971M     0  971M   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop1      249M  249M     0 100% /snap/gnome-3-38-2004/99
+/dev/loop2       62M   62M     0 100% /snap/core20/1328
+/dev/loop3       55M   55M     0 100% /snap/snap-store/558
+/dev/loop4       62M   62M     0 100% /snap/core20/1376
+/dev/loop5       44M   44M     0 100% /snap/snapd/14978
+/dev/loop6       66M   66M     0 100% /snap/gtk-common-themes/1519
+/dev/loop7       44M   44M     0 100% /snap/snapd/15177
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           195M   52K  195M   1% /run/user/1000
+vrushali@ubuntu:~$ du -sh
+9.3M	.
+vrushali@ubuntu:~$ du -h
+4.0K	./cmd/TestDir/SubDir1
+12K	./cmd/TestDir
+20K	./cmd
+4.0K	./.ssh
+4.0K	./vrush
+4.0K	./Public
+4.0K	./journal
+4.0K	./.gnupg/private-keys-v1.d
+16K	./.gnupg
+4.0K	./Downloads
+4.0K	./Music
+4.0K	./.local/share/nano
+4.0K	./.local/share/sounds
+4.0K	./.local/share/icc
+8.0K	./.local/share/gnome-shell
+4.0K	./.local/share/evolution/calendar/trash
+8.0K	./.local/share/evolution/calendar/system
+16K	./.local/share/evolution/calendar
+4.0K	./.local/share/evolution/addressbook/trash
+4.0K	./.local/share/evolution/addressbook/system/photos
+92K	./.local/share/evolution/addressbook/system
+100K	./.local/share/evolution/addressbook
+4.0K	./.local/share/evolution/memos/trash
+8.0K	./.local/share/evolution/memos
+4.0K	./.local/share/evolution/tasks/trash
+8.0K	./.local/share/evolution/tasks/system
+16K	./.local/share/evolution/tasks
+4.0K	./.local/share/evolution/mail/trash
+8.0K	./.local/share/evolution/mail
+152K	./.local/share/evolution
+112K	./.local/share/gvfs-metadata
+4.0K	./.local/share/flatpak/db
+8.0K	./.local/share/flatpak
+4.0K	./.local/share/applications
+4.0K	./.local/share/gnome-settings-daemon
+52K	./.local/share/xorg
+16K	./.local/share/webkitgtk/localstorage
+4.0K	./.local/share/webkitgtk/deviceidhashsalts/1
+8.0K	./.local/share/webkitgtk/deviceidhashsalts
+28K	./.local/share/webkitgtk
+528K	./.local/share/tracker/data
+532K	./.local/share/tracker
+4.0K	./.local/share/ibus-table
+12K	./.local/share/keyrings
+940K	./.local/share
+944K	./.local
+4.0K	./.cache/vmware/drag_and_drop/lBOqUz
+8.0K	./.cache/vmware/drag_and_drop
+12K	./.cache/vmware
+20K	./.cache/ibus/bus
+24K	./.cache/ibus
+4.0K	./.cache/libgweather
+4.0K	./.cache/evolution/calendar/trash
+8.0K	./.cache/evolution/calendar
+4.0K	./.cache/evolution/addressbook/trash
+8.0K	./.cache/evolution/addressbook
+4.0K	./.cache/evolution/memos/trash
+8.0K	./.cache/evolution/memos
+4.0K	./.cache/evolution/sources/trash
+8.0K	./.cache/evolution/sources
+4.0K	./.cache/evolution/tasks/trash
+8.0K	./.cache/evolution/tasks
+4.0K	./.cache/evolution/mail/trash
+8.0K	./.cache/evolution/mail
+52K	./.cache/evolution
+320K	./.cache/gnome-initial-setup/WebKitCache/Version 16/Blobs
+52K	./.cache/gnome-initial-setup/WebKitCache/Version 16/Records/70DD24B824F61BD6754B1F95008456E1D78FAF4F/Resource
+56K	./.cache/gnome-initial-setup/WebKitCache/Version 16/Records/70DD24B824F61BD6754B1F95008456E1D78FAF4F
+60K	./.cache/gnome-initial-setup/WebKitCache/Version 16/Records
+388K	./.cache/gnome-initial-setup/WebKitCache/Version 16
+392K	./.cache/gnome-initial-setup/WebKitCache
+396K	./.cache/gnome-initial-setup
+7.2M	./.cache/tracker
+4.0K	./.cache/ibus-table
+8.0K	./.cache/ubuntu-report
+360K	./.cache/gstreamer-1.0
+12K	./.cache/update-manager-core
+8.1M	./.cache
+4.0K	./Templates
+4.0K	./Videos
+4.0K	./Documents
+56K	./Desktop
+8.0K	./.config/ibus/bus
+12K	./.config/ibus
+8.0K	./.config/evolution/sources
+12K	./.config/evolution
+8.0K	./.config/gtk-3.0
+8.0K	./.config/dconf
+4.0K	./.config/goa-1.0
+4.0K	./.config/update-notifier
+4.0K	./.config/nautilus
+68K	./.config/pulse
+132K	./.config
+4.0K	./Pictures
+9.3M	.
+
