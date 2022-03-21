@@ -1,0 +1,21 @@
+vrushali@ubuntu:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.4 LTS
+Release:	20.04
+Codename:	focal
+vrushali@ubuntu:~$ crontab -l
+no crontab for vrushali
+vrushali@ubuntu:~$ crontab -e
+no crontab for root - using an empty one
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.basic
+  3. /usr/bin/vim.tiny
+  4. /bin/ed
+    Choose 1-4 [1]: 1
+vrushali@ubuntu:~$ cd /home/Netaxis/Desktop/
+vrushali@ubuntu:~$ vim abc.sh
+vrushali@ubuntu:~$ touch /home/Netaxis/Desktop/file.txt
+ vrushali@ubuntu:~$ chmod u+x abc.sh
+    
