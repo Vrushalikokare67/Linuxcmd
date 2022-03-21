@@ -1,0 +1,29 @@
+vrushali@ubuntu:~$ free
+              total        used        free      shared  buff/cache   available
+Mem:        1987724      943352      354104        2360      690268      889120
+Swap:        945416           0      945416
+vrushali@ubuntu:~$ swapon
+NAME      TYPE   SIZE USED PRIO
+/swapfile file 923.3M   0B   -2
+vrushali@ubuntu:~$ cd /
+vrushali@ubuntu:/$ ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swapfile  usr
+vrushali@ubuntu:/$ sudo swapoff /swapfile
+[sudo] password for vrushali: 
+vrushali@ubuntu:/$ swapon
+vrushali@ubuntu:/$ sudo chmod 600 /swapfile
+vrushali@ubuntu:/$ sudo mkswap /swapfile
+mkswap: /swapfile: warning: wiping old swap signature.
+Setting up swapspace version 1, size = 923.3 MiB (968105984 bytes)
+no label, UUID=a85b7a60-b01f-4f57-8920-ddcfe9900485
+vrushali@ubuntu:/$  sudo swapon /swapfile
+vrushali@ubuntu:/$ swapon
+NAME      TYPE   SIZE USED PRIO
+/swapfile file 923.3M   0B   -2
+vrushali@ubuntu:/$ sudo vim /etc/fstab
+vrushali@ubuntu:/$ free
+              total        used        free      shared  buff/cache   available
+Mem:        1987724      937056      359112        2356      691556      895432
+Swap:        945416           0      945416
