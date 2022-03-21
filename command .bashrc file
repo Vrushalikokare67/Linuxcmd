@@ -1,0 +1,13 @@
+vrushali@ubuntu:~$ pwd
+/home/vrushali
+vrushali@ubuntu:~$ ls -a
+.              .cache     Downloads  Music     .sudo_as_admin_successful
+..             cmd        .gnupg     Pictures  Templates
+.bash_history  .config    journal    .profile  Videos
+.bash_logout   Desktop    listings   Public    vrush
+.bashrc        Documents  .local     .ssh
+vrushali@ubuntu:~$ nano .bashrc
+
+
+
+
