@@ -1,0 +1,58 @@
+vrushali@ubuntu:~$ cd Desktop/
+vrushali@ubuntu:~/Desktop$ ls -a
+.   devops.tar     devops.zip      hardlink    iauro.txt  softlink
+..  devops.tar.gz  .example11.swp  iauro1.txt  learn.txt
+vrushali@ubuntu:~/Desktop$ ls -l
+total 40
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:51 devops.tar
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:54 devops.tar.gz
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:53 devops.zip
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 hardlink
+-rw-rw-r-- 1 vrushali vrushali    55 Mar 19 03:13 iauro1.txt
+-rw-rw-r-- 1 vrushali vrushali     0 Mar 19 03:07 iauro.txt
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 learn.txt
+lrwxrwxrwx 1 vrushali vrushali     9 Mar 20 00:07 softlink -> learn.txt
+vrushali@ubuntu:~/Desktop$ chmod o+w learn.txt
+vrushali@ubuntu:~/Desktop$ ls -l
+total 40
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:51 devops.tar
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:54 devops.tar.gz
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:53 devops.zip
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 hardlink
+-rw-rw-r-- 1 vrushali vrushali    55 Mar 19 03:13 iauro1.txt
+-rw-rw-r-- 1 vrushali vrushali     0 Mar 19 03:07 iauro.txt
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 learn.txt
+lrwxrwxrwx 1 vrushali vrushali     9 Mar 20 00:07 softlink -> learn.txt
+vrushali@ubuntu:~/Desktop$ chmod o+w iauro.txt
+vrushali@ubuntu:~/Desktop$ ls -l
+total 40
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:51 devops.tar
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:54 devops.tar.gz
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:53 devops.zip
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 hardlink
+-rw-rw-r-- 1 vrushali vrushali    55 Mar 19 03:13 iauro1.txt
+-rw-rw-rw- 1 vrushali vrushali     0 Mar 19 03:07 iauro.txt
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 learn.txt
+lrwxrwxrwx 1 vrushali vrushali     9 Mar 20 00:07 softlink -> learn.txt
+vrushali@ubuntu:~/Desktop$ chmod o-w iauro.txt
+vrushali@ubuntu:~/Desktop$ ls -l
+total 40
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:51 devops.tar
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:54 devops.tar.gz
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:53 devops.zip
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 hardlink
+-rw-rw-r-- 1 vrushali vrushali    55 Mar 19 03:13 iauro1.txt
+-rw-rw-r-- 1 vrushali vrushali     0 Mar 19 03:07 iauro.txt
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 learn.txt
+lrwxrwxrwx 1 vrushali vrushali     9 Mar 20 00:07 softlink -> learn.txt
+vrushali@ubuntu:~/Desktop$ chmod 764 iauro.txt
+ vrushali@ubuntu:~/Desktop$ ls -l
+total 40
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:51 devops.tar
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:54 devops.tar.gz
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:53 devops.zip
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 hardlink
+-rw-rw-r-- 1 vrushali vrushali    55 Mar 19 03:13 iauro1.txt
+-rwxrw-r-- 1 vrushali vrushali     0 Mar 19 03:07 iauro.txt
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 learn.txt
+lrwxrwxrwx 1 vrushali vrushali     9 Mar 20 00:07 softlink -> learn.txt
