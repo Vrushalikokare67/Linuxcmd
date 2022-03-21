@@ -1,0 +1,91 @@
+Starting "default"...
+(default) Waiting for an IP...
+Machine "default" was started.
+Waiting for SSH to be available...
+Detecting the provisioner...
+Started machines may have new IP addresses. You may need to re-run the `docker-machine env` command.
+Regenerate TLS machine certs?  Warning: this is irreversible. (y/n): Regenerating TLS certificates
+Waiting for SSH to be available...
+Detecting the provisioner...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+
+
+
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o           __/
+             \    \         __/
+              \____\_______/
+
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
+
+
+Start interactive shell
+
+vrush@LAPTOP-PSDVQHIL MINGW64 /c/Program Files/Docker Toolbox
+$ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete
+Digest: sha256:6d60b42fdd5a0aa8a718b5f2eab139868bb4fa9a03c9fe1a59ed4946317c4318
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+
+vrush@LAPTOP-PSDVQHIL MINGW64 /c/Program Files/Docker Toolbox
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+vrush@LAPTOP-PSDVQHIL MINGW64 /c/Program Files/Docker Toolbox
+$ docker pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+4d32b49e2995: Pull complete
+Digest: sha256:bea6d19168bbfd6af8d77c2cc3c572114eb5d113e6f422573c93cb605a0e2ffb
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
+vrush@LAPTOP-PSDVQHIL MINGW64 /c/Program Files/Docker Toolbox
+$ docker run -itd --name=iauroo ubuntu
+42a228ac5bb5a6f2ccbd94ea790340b55fab767fdbaa72a4e890e5818a6a615e
+vrush@LAPTOP-PSDVQHIL MINGW64 /c/Program Files/Docker Toolbox
+$ docker images
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+ubuntu                 latest              ff0fea8310f3        3 days ago          72.8MB
+node-docker-tutorial   latest              9563e47c43f8        4 weeks ago         189MB
+mysql                  latest              17b062d639f4        4 weeks ago         519MB
+postgres               latest              6a3c44872108        4 weeks ago         374MB
+mongo                  latest              5285cb69ea55        6 weeks ago         698MB
+ubuntu                 <none>              54c9d81cbb44        6 weeks ago         72.8MB
+nginx                  latest              c316d5a335a5        7 weeks ago         142MB
+hello-world            latest              feb5d9fea6a5        5 months ago        13.3kB
+node                   9-slim              e20bb4abe4ee        3 years ago         182MB
+vrush@LAPTOP-PSDVQHIL MINGW64 /c/Program Files/Docker Toolbox
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+42a228ac5bb5        ubuntu              "bash"              9 seconds ago       Up 9 seconds                            iauroo
