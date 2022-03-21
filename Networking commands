@@ -1,0 +1,116 @@
+vrushali@ubuntu:~$ hostname -d
+vrushali@ubuntu:~$ ping google.com
+PING google.com (216.58.203.14) 56(84) bytes of data.
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=1 ttl=128 time=358 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=2 ttl=128 time=95.3 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=3 ttl=128 time=204 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=4 ttl=128 time=141 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=5 ttl=128 time=145 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=6 ttl=128 time=101 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=7 ttl=128 time=190 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=8 ttl=128 time=212 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=9 ttl=128 time=233 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=10 ttl=128 time=94.0 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=11 ttl=128 time=176 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=12 ttl=128 time=198 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=13 ttl=128 time=89.8 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=14 ttl=128 time=77.7 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=15 ttl=128 time=264 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=16 ttl=128 time=183 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=17 ttl=128 time=75.9 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=18 ttl=128 time=228 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=19 ttl=128 time=251 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=20 ttl=128 time=101 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=21 ttl=128 time=192 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=22 ttl=128 time=214 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=23 ttl=128 time=237 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=24 ttl=128 time=137 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=25 ttl=128 time=107 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=26 ttl=128 time=198 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=27 ttl=128 time=220 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=28 ttl=128 time=140 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=29 ttl=128 time=80.8 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=30 ttl=128 time=375 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=31 ttl=128 time=922 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=32 ttl=128 time=550 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=33 ttl=128 time=680 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=36 ttl=128 time=1109 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=37 ttl=128 time=677 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=38 ttl=128 time=291 ms
+^Z
+vrushali@ubuntu:~$ sudo apt install net-tools
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 16 not upgraded.
+Need to get 196 kB of archives.
+After this operation, 864 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 net-tools amd64 1.60+git20180626.aebd88e-1ubuntu1 [196 kB]
+Fetched 196 kB in 2s (89.7 kB/s)                     
+Selecting previously unselected package net-tools.
+(Reading database ... 155661 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20180626.aebd88e-1ubuntu1_amd64.deb ..
+.
+Unpacking net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Setting up net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Processing triggers for man-db (2.9.1-1) ...
+vrushali@ubuntu:~$ ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.80.129  netmask 255.255.255.0  broadcast 192.168.80.255
+        inet6 fe80::d44b:e4e3:24c4:5583  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:74:47:cd  txqueuelen 1000  (Ethernet)
+        RX packets 8321  bytes 7935730 (7.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4657  bytes 392419 (392.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1042  bytes 94648 (94.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1042  bytes 94648 (94.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+vrushali@ubuntu:~$ ping www.intellipaat.com
+PING www.intellipaat.com (104.18.27.176) 56(84) bytes of data.
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=1 ttl=128 time=503 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=2 ttl=128 time=40.0 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=3 ttl=128 time=51.2 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=4 ttl=128 time=49.5 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=5 ttl=128 time=47.7 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=6 ttl=128 time=55.2 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=7 ttl=128 time=64.8 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=8 ttl=128 time=58.9 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=9 ttl=128 time=34.1 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=10 ttl=128 time=34.5 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=11 ttl=128 time=33.2 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=12 ttl=128 time=48.8 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=13 ttl=128 time=39.8 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=14 ttl=128 time=46.1 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=15 ttl=128 time=46.4 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=16 ttl=128 time=43.8 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=17 ttl=128 time=52.3 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=18 ttl=128 time=59.9 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=19 ttl=128 time=36.7 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=20 ttl=128 time=57.1 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=21 ttl=128 time=37.6 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=22 ttl=128 time=35.4 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=23 ttl=128 time=31.9 ms
+64 bytes from 104.18.27.176 (104.18.27.176): icmp_seq=24 ttl=128 time=82.1 ms
+^Z
+[2]+  Stopped                 ping www.intellipaat.com
+vrushali@ubuntu:~$ ping -c 5 www.intellipaat.com
+PING www.intellipaat.com (104.18.26.176) 56(84) bytes of data.
+64 bytes from 104.18.26.176 (104.18.26.176): icmp_seq=1 ttl=128 time=140 ms
+64 bytes from 104.18.26.176 (104.18.26.176): icmp_seq=2 ttl=128 time=58.4 ms
+64 bytes from 104.18.26.176 (104.18.26.176): icmp_seq=3 ttl=128 time=55.1 ms
+64 bytes from 104.18.26.176 (104.18.26.176): icmp_seq=4 ttl=128 time=48.8 ms
+64 bytes from 104.18.26.176 (104.18.26.176): icmp_seq=5 ttl=128 time=38.7 ms
+
+--- www.intellipaat.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4008ms
+rtt min/avg/max/mdev = 38.663/68.153/139.836/36.466 ms
+
