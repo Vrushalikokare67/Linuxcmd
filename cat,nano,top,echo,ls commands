@@ -1,0 +1,43 @@
+vrushali@ubuntu:~/Desktop$ cat
+Hello world
+Hello world
+welcome in this tutorial setion
+welcome in this tutorial setion
+vrushali@ubuntu:~/Desktop$ ls 
+devops.tar     devops.zip  iauro1.txt  learn.txt
+devops.tar.gz  hardlink    iauro.txt   softlink
+vrushali@ubuntu:~/Desktop$ cat learn.txt
+vrushali@ubuntu:~/Desktop$ cat iauro1.txt
+iauro team welcome
+celebrate all programs in this team
+vrushali@ubuntu:~/Desktop$ less learn.txt
+
+[2]+  Stopped                 less learn.txt
+vrushali@ubuntu:~/Desktop$ nano
+
+
+Use "fg" to return to nano.
+
+[3]+  Stopped                 nano
+vrushali@ubuntu:~/Desktop$ top
+vrushali@ubuntu:~/Desktop$ echo awesome iauro team
+awesome iauro team
+vrushali@ubuntu:~/Desktop$ echo "very helful"
+very helful
+vrushali@ubuntu:~/Desktop$ myvar="mark"
+vrushali@ubuntu:~/Desktop$ echo $myvar
+mark
+vrushali@ubuntu:~/Desktop$ x=10
+vrushali@ubuntu:~/Desktop$ echo "the value of x is $x"
+the value of x is 10
+vrushali@ubuntu:~/Desktop$ ls -l
+total 40
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:51 devops.tar
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:54 devops.tar.gz
+-rw-rw-r-- 1 vrushali vrushali 10240 Mar 19 06:53 devops.zip
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 hardlink
+-rw-rw-r-- 1 vrushali vrushali    55 Mar 19 03:13 iauro1.txt
+-rwxrw-r-- 1 vrushali vrushali     0 Mar 19 03:07 iauro.txt
+-rwxrwsrwx 2 vrushali vrushali     0 Mar 19 03:05 learn.txt
+lrwxrwxrwx 1 vrushali vrushali     9 Mar 20 00:07 softlink -> learn.txt
+
