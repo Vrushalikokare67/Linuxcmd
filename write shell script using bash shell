@@ -1,0 +1,7 @@
+
+vrushali@ubuntu:~$ echo echo welcome in iauro family > hello_world
+vrushali@ubuntu:~$ chmod +x hello_world
+vrushali@ubuntu:~$ ./hello_world
+welcome in iauro family
+vrushali@ubuntu:~$ 
+
