@@ -1,0 +1,118 @@
+vrushali@ubuntu:~$ sudo apt install tuned
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  ethtool gawk libsigsegv2 python3-configobj python3-decorator python3-pyudev
+  virt-what
+Suggested packages:
+  gawk-doc python-configobj-doc
+Recommended packages:
+  linux-cpupower
+The following NEW packages will be installed:
+  ethtool gawk libsigsegv2 python3-configobj python3-decorator python3-pyudev
+  tuned virt-what
+0 upgraded, 8 newly installed, 0 to remove and 19 not upgraded.
+Need to get 758 kB of archives.
+After this operation, 3,209 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsigsegv2 amd64 2.12-2 [13.9 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/main amd64 gawk amd64 1:5.0.1+dfsg-1 [418 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/main amd64 ethtool amd64 1:5.4-1 [134 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 python3-configobj all 5.0.6-4 [34.1 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 python3-decorator all 4.4.2-0ubuntu1 [10.3 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal/main amd64 python3-pyudev all 0.21.0-3ubuntu1 [37.1 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 virt-what amd64 1.19-1 [15.3 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 tuned all 2.10.0-1 [96.1 kB]
+Fetched 758 kB in 6s (128 kB/s)
+Selecting previously unselected package libsigsegv2:amd64.
+(Reading database ... 155919 files and directories currently installed.)
+Preparing to unpack .../libsigsegv2_2.12-2_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.12-2) ...
+Setting up libsigsegv2:amd64 (2.12-2) ...
+Selecting previously unselected package gawk.
+(Reading database ... 155926 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.0.1+dfsg-1_amd64.deb ...
+Unpacking gawk (1:5.0.1+dfsg-1) ...
+Selecting previously unselected package ethtool.
+Preparing to unpack .../1-ethtool_1%3a5.4-1_amd64.deb ...
+Unpacking ethtool (1:5.4-1) ...
+Selecting previously unselected package python3-configobj.
+Preparing to unpack .../2-python3-configobj_5.0.6-4_all.deb ...
+Unpacking python3-configobj (5.0.6-4) ...
+Selecting previously unselected package python3-decorator.
+Preparing to unpack .../3-python3-decorator_4.4.2-0ubuntu1_all.deb ...
+Unpacking python3-decorator (4.4.2-0ubuntu1) ...
+Selecting previously unselected package python3-pyudev.
+Preparing to unpack .../4-python3-pyudev_0.21.0-3ubuntu1_all.deb ...
+Unpacking python3-pyudev (0.21.0-3ubuntu1) ...
+Selecting previously unselected package virt-what.
+Preparing to unpack .../5-virt-what_1.19-1_amd64.deb ...
+Unpacking virt-what (1.19-1) ...
+Selecting previously unselected package tuned.
+Preparing to unpack .../6-tuned_2.10.0-1_all.deb ...
+Unpacking tuned (2.10.0-1) ...
+Setting up virt-what (1.19-1) ...
+Setting up gawk (1:5.0.1+dfsg-1) ...
+Setting up python3-decorator (4.4.2-0ubuntu1) ...
+Setting up python3-configobj (5.0.6-4) ...
+Setting up python3-pyudev (0.21.0-3ubuntu1) ...
+Setting up ethtool (1:5.4-1) ...
+Setting up tuned (2.10.0-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/tuned.service → /lib
+/systemd/system/tuned.service.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+vrushali@ubuntu:~$ systemctl status tuned
+● tuned.service - Dynamic System Tuning Daemon
+     Loaded: loaded (/lib/systemd/system/tuned.service; enabled; vendor preset:>
+     Active: active (running) since Mon 2022-03-21 21:30:32 PDT; 49s ago
+       Docs: man:tuned(8)
+             man:tuned.conf(5)
+             man:tuned-adm(8)
+   Main PID: 5001 (tuned)
+      Tasks: 4 (limit: 2250)
+     Memory: 12.5M
+     CGroup: /system.slice/tuned.service
+             └─5001 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+
+Mar 21 21:30:30 ubuntu systemd[1]: Starting Dynamic System Tuning Daemon...
+Mar 21 21:30:32 ubuntu systemd[1]: Started Dynamic System Tuning Daemon.
+
+[2]+  Stopped                 systemctl status tuned
+vrushali@ubuntu:~$ tuned-adm active
+Current active profile: virtual-guest
+vrushali@ubuntu:~$ tuned-adm list
+Available profiles:
+- atomic-guest                - Optimize virtual guests based on the Atomic variant
+- atomic-host                 - Optimize bare metal systems running the Atomic variant
+- balanced                    - General non-specialized tuned profile
+- cpu-partitioning            - Optimize for CPU partitioning
+- default                     - Legacy default tuned profile
+- desktop                     - Optimize for the desktop use-case
+- desktop-powersave           - Optmize for the desktop use-case with power saving
+- enterprise-storage          - Legacy profile for RHEL6, for RHEL7, please use throughput-performance profile
+- laptop-ac-powersave         - Optimize for laptop with power savings
+- laptop-battery-powersave    - Optimize laptop profile with more aggressive power saving
+- latency-performance         - Optimize for deterministic performance at the cost of increased power consumption
+- mssql                       - Optimize for MS SQL Server
+- network-latency             - Optimize for deterministic performance at the cost of increased power consumption, focused on low latency network performance
+- network-throughput          - Optimize for streaming network throughput, generally only necessary on older CPUs or 40G+ networks
+- oracle                      - Optimize for Oracle RDBMS
+- powersave                   - Optimize for low power consumption
+- realtime                    - Optimize for realtime workloads
+- realtime-virtual-guest      - Optimize for realtime workloads running within a KVM guest
+- realtime-virtual-host       - Optimize for KVM guests running realtime workloads
+- sap-hana                    - Optimize for SAP HANA
+- sap-hana-vmware             - Optimize for SAP HANA running inside a VMware guest
+- sap-netweaver               - Optimize for SAP NetWeaver
+- server-powersave            - Optimize for server power savings
+- spindown-disk               - Optimize for power saving by spinning-down rotational disks
+- throughput-performance      - Broadly applicable tuning that provides excellent performance across a variety of common server workloads
+- virtual-guest               - Optimize for running inside a virtual guest
+- virtual-host                - Optimize for running KVM guests
+Current active profile: virtual-guest
+vrushali@ubuntu:~$ sudo tuned-adm active
+Current active profile: virtual-guest
+vrushali@ubuntu:~$ tuned-adm off
