@@ -1,0 +1,167 @@
+vrushali@ubuntu:~$  sudo apt update -y
+[sudo] password for vrushali: 
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,338 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,665 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [406 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [233 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.6 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [9,804 B]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [21.9 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [820 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [117 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [532 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66.2 kB]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:17 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [620 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [315 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [278 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.8 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [24.3 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [877 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [125 kB]
+Get:24 http://us.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [528 B]
+Get:25 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [390 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.5 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7,336 B]
+Get:28 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Get:29 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [592 B]
+Get:30 http://us.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7,984 B]
+Get:31 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30.8 kB]
+Fetched 7,774 kB in 33s (239 kB/s)                                             
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+19 packages can be upgraded. Run 'apt list --upgradable' to see them.
+vrushali@ubuntu:~$ sudo apt install ntp 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libevent-core-2.1-7 libevent-pthreads-2.1-7 libopts25 sntp
+Suggested packages:
+  ntp-doc
+The following packages will be REMOVED:
+  systemd-timesyncd
+The following NEW packages will be installed:
+  libevent-core-2.1-7 libevent-pthreads-2.1-7 libopts25 ntp sntp
+0 upgraded, 5 newly installed, 1 to remove and 19 not upgraded.
+Need to get 875 kB of archives.
+After this operation, 2,483 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libopts25 amd64 1:5.18.16-3 [59.4 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 ntp amd64 1:4.2.8p12+dfsg-3ubuntu4.20.04.1 [657 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libevent-core-2.1-7 amd64 2.1.11-stable-1 [89.1 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libevent-pthreads-2.1-7 amd64 2.1.11-stable-1 [7,372 B]
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 sntp amd64 1:4.2.8p12+dfsg-3ubuntu4.20.04.1 [62.3 kB]
+Fetched 875 kB in 6s (139 kB/s)                                                
+Selecting previously unselected package libopts25:amd64.
+(Reading database ... 155835 files and directories currently installed.)
+Preparing to unpack .../libopts25_1%3a5.18.16-3_amd64.deb ...
+Unpacking libopts25:amd64 (1:5.18.16-3) ...
+dpkg: systemd-timesyncd: dependency problems, but removing anyway as you request
+ed:
+ systemd depends on systemd-timesyncd | time-daemon; however:
+  Package systemd-timesyncd is to be removed.
+  Package time-daemon is not installed.
+  Package systemd-timesyncd which provides time-daemon is to be removed.
+ systemd depends on systemd-timesyncd | time-daemon; however:
+  Package systemd-timesyncd is to be removed.
+  Package time-daemon is not installed.
+  Package systemd-timesyncd which provides time-daemon is to be removed.
+
+(Reading database ... 155840 files and directories currently installed.)
+Removing systemd-timesyncd (245.4-4ubuntu3.15) ...
+Selecting previously unselected package ntp.
+(Reading database ... 155827 files and directories currently installed.)
+Preparing to unpack .../ntp_1%3a4.2.8p12+dfsg-3ubuntu4.20.04.1_amd64.deb ...
+Unpacking ntp (1:4.2.8p12+dfsg-3ubuntu4.20.04.1) ...
+Selecting previously unselected package libevent-core-2.1-7:amd64.
+Preparing to unpack .../libevent-core-2.1-7_2.1.11-stable-1_amd64.deb ...
+Unpacking libevent-core-2.1-7:amd64 (2.1.11-stable-1) ...
+Selecting previously unselected package libevent-pthreads-2.1-7:amd64.
+Preparing to unpack .../libevent-pthreads-2.1-7_2.1.11-stable-1_amd64.deb ...
+Unpacking libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) ...
+Selecting previously unselected package sntp.
+Preparing to unpack .../sntp_1%3a4.2.8p12+dfsg-3ubuntu4.20.04.1_amd64.deb ...
+Unpacking sntp (1:4.2.8p12+dfsg-3ubuntu4.20.04.1) ...
+Setting up libopts25:amd64 (1:5.18.16-3) ...
+Setting up ntp (1:4.2.8p12+dfsg-3ubuntu4.20.04.1) ...
+Created symlink /etc/systemd/system/network-pre.target.wants/ntp-systemd-netif.p
+ath → /lib/systemd/system/ntp-systemd-netif.path.
+Created symlink /etc/systemd/system/multi-user.target.wants/ntp.service → /lib/s
+ystemd/system/ntp.service.
+ntp-systemd-netif.service is a disabled or a static unit, not starting it.
+Setting up libevent-core-2.1-7:amd64 (2.1.11-stable-1) ...
+Setting up libevent-pthreads-2.1-7:amd64 (2.1.11-stable-1) ...
+Setting up sntp (1:4.2.8p12+dfsg-3ubuntu4.20.04.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.15) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+vrushali@ubuntu:~$ sntp --version
+sntp 4.2.8p12@1.3728-o (1)
+vrushali@ubuntu:~$ sudo systemctl status ntp
+● ntp.service - Network Time Service
+     Loaded: loaded (/lib/systemd/system/ntp.service; enabled; vendor preset: e>
+     Active: active (running) since Mon 2022-03-21 21:18:08 PDT; 1min 3s ago
+       Docs: man:ntpd(8)
+   Main PID: 2786 (ntpd)
+      Tasks: 2 (limit: 2250)
+     Memory: 1.0M
+     CGroup: /system.slice/ntp.service
+             └─2786 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 128:135
+
+Mar 21 21:18:12 ubuntu ntpd[2786]: Soliciting pool server 85.215.93.134
+Mar 21 21:18:12 ubuntu ntpd[2786]: Soliciting pool server 192.46.210.39
+Mar 21 21:18:13 ubuntu ntpd[2786]: Soliciting pool server 139.59.55.93
+Mar 21 21:18:13 ubuntu ntpd[2786]: Soliciting pool server 139.59.15.185
+Mar 21 21:18:13 ubuntu ntpd[2786]: Soliciting pool server 157.245.102.2
+Mar 21 21:18:13 ubuntu ntpd[2786]: Soliciting pool server 193.70.94.126
+Mar 21 21:18:13 ubuntu ntpd[2786]: Soliciting pool server 91.189.94.4
+Mar 21 21:18:14 ubuntu ntpd[2786]: Soliciting pool server 91.189.89.198
+Mar 21 21:18:14 ubuntu ntpd[2786]: Soliciting pool server 128.199.23.44
+Mar 21 21:18:14 ubuntu ntpd[2786]: Soliciting pool server 2400:8904::f03c:92ff:>
+
+[1]+  Stopped                 sudo systemctl status ntp
+vrushali@ubuntu:~$ sudo ufw reload
+Firewall not enabled (skipping reload)
+vrushali@ubuntu:~$ sudo ufw status
+Status: inactive
+vrushali@ubuntu:~$  sudo ufw allow ntp 
+Rules updated
+Rules updated (v6)
+vrushali@ubuntu:~$ sudo ufw reload
+Firewall not enabled (skipping reload)
+vrushali@ubuntu:~$ sudo ufw status
+Status: inactive
+vrushali@ubuntu:~$ sudo apt update -y
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease               
+Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease                      
+Hit:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+19 packages can be upgraded. Run 'apt list --upgradable' to see them.
+vrushali@ubuntu:~$ sudo apt install ntpdate
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  ntpdate
+0 upgraded, 1 newly installed, 0 to remove and 19 not upgraded.
+Need to get 48.8 kB of archives.
+After this operation, 178 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 ntpdate amd64 1:4.2.8p12+dfsg-3ubuntu4.20.04.1 [48.8 kB]
+Fetched 48.8 kB in 1s (33.6 kB/s)  
+Selecting previously unselected package ntpdate.
+(Reading database ... 155907 files and directories currently installed.)
+Preparing to unpack .../ntpdate_1%3a4.2.8p12+dfsg-3ubuntu4.20.04.1_amd64.deb ...
+Unpacking ntpdate (1:4.2.8p12+dfsg-3ubuntu4.20.04.1) ...
+Setting up ntpdate (1:4.2.8p12+dfsg-3ubuntu4.20.04.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+vrushali@ubuntu:~$ 
