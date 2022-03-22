@@ -1,0 +1,125 @@
+vrushali@ubuntu:~$ sudo apt -y install stratisd stratis-cli
+[sudo] password for vrushali: 
+Installed:
+  stratisd-1.0.0-2.el8.x86_64                                              
+  stratis-cli-1.0.0-2.el8.noarch                                           
+  python3-dbus-client-gen-0.3-1.el8.noarch                                 
+  python3-justbases-0.9-6.el8.noarch                                       
+  python3-dbus-signature-pyparsing-0.03-2.el8.noarch                       
+  python3-dbus-python-client-gen-0.6-2.el8.noarch                          
+  python3-justbytes-0.11-2.el8.noarch                                      
+  python3-into-dbus-python-0.06-2.el8.noarch                               
+  python3-pyparsing-2.1.10-7.el8.noarch                                    
+
+Complete!
+vrushali@ubuntu:~$rpm -qi stratisd stratis-cli
+Name        : stratisd
+Version     : 1.0.2
+Release     : 1.el8
+Architecture: x86_64
+Install Date: Tue 11 Dec 2018 12:35:20 AM EST
+Group       : Unspecified
+Size        : 4102289
+License     : MPLv2.0
+Signature   : RSA/SHA256, Mon 08 Oct 2018 03:35:30 PM EDT, Key ID 199e2f91fd431d51
+Source RPM  : stratisd-1.0.0-2.el8.src.rpm
+Build Date  : Mon 08 Oct 2018 03:09:11 PM EDT
+Build Host  : x86-vm-02.build.eng.bos.redhat.com
+Relocations : (not relocatable)
+Packager    : Red Hat, Inc. <http://bugzilla.redhat.com/bugzilla>
+Vendor      : Red Hat, Inc.
+URL         : https://github.com/stratis-storage/stratisd
+Summary     : Daemon that manages block devices to create filesystems
+Description :
+Daemon that manages block devices to create filesystems.
+Name        : stratis-cli
+Version     : 1.0.3
+Release     : 1.el8
+Architecture: noarch
+Install Date: Tue 11 Dec 2018 12:35:21 AM EST
+Group       : Unspecified
+Size        : 128565
+License     : ASL 2.0
+Signature   : RSA/SHA256, Mon 08 Oct 2018 03:25:13 PM EDT, Key ID 199e2f91fd431d51
+Source RPM  : stratis-cli-1.0.0-2.el8.src.rpm
+Build Date  : Wed 03 Oct 2018 06:16:35 PM EDT
+Build Host  : x86-vm-08.build.eng.bos.redhat.com
+Relocations : (not relocatable)
+Packager    : Red Hat, Inc. <http://bugzilla.redhat.com/bugzilla>
+Vendor      : Red Hat, Inc.
+URL         : https://github.com/stratis-storage/stratis-cli
+Summary     : Command-line tool for interacting with the Stratis daemon
+Description :
+stratis provides a command-line interface (CLI) for
+interacting with the Stratis daemon, stratisd. stratis
+interacts with stratisd via D-Bus.
+vrushali@ubuntu:~$ sudo systemctl status stratisd
+● stratisd.service - A daemon that manages a pool of block devices to create flexible file systems
+   Loaded: loaded (/usr/lib/systemd/system/stratisd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-12-11 00:41:15 EST; 3s ago
+     Docs: man:stratisd(8)
+ Main PID: 2988 (stratisd)
+    Tasks: 1 (limit: 5056)
+   Memory: 868.0K
+   CGroup: /system.slice/stratisd.service
+           └─2988 /usr/libexec/stratisd --debug
+
+Dec 11 00:41:15 rhel8.localdomain--static systemd[1]: Started A daemon that manages a pool of block devices to create flexible file systems.
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]: DEBUG libstratis::stratis::buff_log: BuffLogger: pass_through: true hold time: none
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]:  INFO stratisd: Using StratEngine
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]: DEBUG stratisd: Engine state:
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]: StratEngine {
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]:     pools: {},
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]:     incomplete_pools: {},
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]:     watched_dev_last_event_nrs: {}
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]: }
+Dec 11 00:41:15 rhel8.localdomain--static stratisd[2988]:  INFO stratisd: DBUS API is now available
+vrushali@ubuntu:~$  lsblk
+NAME          MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sr0            11:0    1 1024M  0 rom  
+vda           252:0    0   20G  0 disk 
+├─vda1        252:1    0    1G  0 part /boot
+└─vda2        252:2    0   19G  0 part 
+  ├─rhel-root 253:0    0   17G  0 lvm  /
+  └─rhel-swap 253:1    0    2G  0 lvm  [SWAP]
+vdb           252:16   0   10G  0 disk 
+vdc           252:32   0   10G  0 disk 
+vdd           252:48   0   10G  0 disk 
+vde           252:64   0   10G  0 disk
+vrushali@ubuntu:~$ sudo stratis pool create mypool1 /dev/vdb
+vrushali@ubuntu:~$ sudo stratis pool list
+Name       Total Physical Size  Total Physical Used
+mypool1                 10 GiB               52 MiB
+vrushali@ubuntu:~$ sudo stratis fs create mypool1 logs
+vrushali@ubuntu:~$ sudo stratis fs list
+Pool Name  Name  Used     Created            Device                     
+mypool1    logs  546 MiB  Dec 11 2018 01:00  /dev/stratis/mypool1/logs  
+mypool2    data  546 MiB  Dec 11 2018 01:04  /dev/stratis/mypool2/data
+vrushali@ubuntu:~$ sudo lsblk 
+NAME                                                                                        MAJ:MIN RM  SIZE RO TYPE    MOUNTPOINT
+sr0                                                                                          11:0    1 1024M  0 rom     
+vda                                                                                         252:0    0   20G  0 disk    
+├─vda1                                                                                      252:1    0    1G  0 part    /boot
+└─vda2                                                                                      252:2    0   19G  0 part    
+  ├─rhel-root                                                                               253:0    0   17G  0 lvm     /
+  └─rhel-swap                                                                               253:1    0    2G  0 lvm     [SWAP]
+vdb                                                                                         252:16   0   10G  0 disk    
+└─stratis-1-private-68bf465c93eb4aa98ed2264b38d8c42a-physical-originsub                     253:2    0  1.8G  0 stratis 
+  ├─stratis-1-private-68bf465c93eb4aa98ed2264b38d8c42a-flex-thinmeta                        253:3    0   16M  0 stratis 
+  │ └─stratis-1-private-68bf465c93eb4aa98ed2264b38d8c42a-thinpool-pool                      253:6    0  1.8G  0 stratis 
+  │   ├─stratis-1-68bf465c93eb4aa98ed2264b38d8c42a-thin-fs-217bee04c2f14266b496eaada54a0311 253:12   0    1T  0 stratis 
+  │   └─stratis-1-68bf465c93eb4aa98ed2264b38d8c42a-thin-fs-1f563ecb6e0c497ab3fc24d5b2e33fe1 253:13   0    1T  0 stratis 
+  ├─stratis-1-private-68bf465c93eb4aa98ed2264b38d8c42a-flex-thindata                        253:4    0  1.8G  0 stratis 
+  │ └─stratis-1-private-68bf465c93eb4aa98ed2264b38d8c42a-thinpool-pool                      253:6    0  1.8G  0 stratis 
+  │   ├─stratis-1-68bf465c93eb4aa98ed2264b38d8c42a-thin-fs-217bee04c2f14266b496eaada54a0311 253:12   0    1T  0 stratis 
+  │   └─stratis-1-68bf465c93eb4aa98ed2264b38d8c42a-thin-fs-1f563ecb6e0c497ab3fc24d5b2e33fe1 253:13   0    1T  0 stratis 
+  └─stratis-1-private-68bf465c93eb4aa98ed2264b38d8c42a-flex-mdv                             253:5    0   16M  0 stratis 
+vdc                                                                                         252:32   0   10G  0 disk    
+vdd                                                                                         252:48   0   10G  0 disk    
+vde                                                                                         252:64   0   10G  0 disk    
+└─stratis-1-private-557de29f274a45d583c62cafbab8edd6-physical-originsub                     253:7    0  816M  0 stratis 
+  ├─stratis-1-private-557de29f274a45d583c62cafbab8edd6-flex-thinmeta                        253:8    0   16M  0 stratis 
+  │ └─stratis-1-private-557de29f274a45d583c62cafbab8edd6-thinpool-pool                      253:11   0  768M  0 stratis 
+  ├─stratis-1-private-557de29f274a45d583c62cafbab8edd6-flex-thindata                        253:9    0  768M  0 stratis 
+  │ └─stratis-1-private-557de29f274a45d583c62cafbab8edd6-thinpool-pool                      253:11   0  768M  0 stratis 
+  └─stratis-1-private-557de29f274a45d583c62cafbab8edd6-flex-mdv                             253:10   0   16M  0 stratis
